@@ -16,6 +16,11 @@ const Numbers = () => {
   return (
     <div className="container-numbers">
       {numberState.map(number => {
+
+        if (number === 0) {
+          return <NumberButton key={`${number}`} number={number} className="big"/>
+        }
+
         return <NumberButton key={`${number}`} number={number} />;
       })}
     </div>
