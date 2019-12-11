@@ -18,10 +18,8 @@ function App() {
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   const [display, setDisplay] = useState([]);
 
-  const handleClick = (numberString) => {
-    console.log(`clicked on ${numberString}`);
-    setDisplay([...display, numberString]);
-    
+  const handleClick = (calcStr) => {
+    setDisplay([...display, calcStr]);
   };
 
   const calculate = () => {
@@ -29,13 +27,21 @@ function App() {
     setDisplay([eval(math)]);
   };
 
+  const clear = () => {
+    setDisplay([]);
+  };
+
+  const negative = () => {
+    let lastItem = display[display.length - 1];
+  }
+
   return (
     <div className="container">
       <Logo />
       <div className="App">
         <Display display={display} />
         <div className="grid-container">
-          <Specials handleClick={handleClick} />
+          <Specials handleClick={handleClick} clear={clear} negative={negative} />
           <Numbers handleClick={handleClick} />
           <Operators handleClick={handleClick} calculate={calculate} />
         </div>
