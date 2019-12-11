@@ -1,9 +1,27 @@
 import React from "react";
 
-const SpecialButton = () => {
+const SpecialButton = (props) => {
+  if (props.special === 'C') {
+    return (
+      <button className="btn-special" onClick={() => props.clear()}>
+        {props.special}
+      </button>
+    )
+  }
+  
+  // if (props.special === '+/-') {
+  //   return (
+  //     <button className="btn-special" onClick={() => props.negative()}>
+  //       {props.special}
+  //     </button>
+  //   )
+  // }
+
   return (
-    <>
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
-    </>
+    <button className="btn-special" onClick={() => props.handleClick(props.special)}>
+      {props.special}
+    </button>
   );
 };
+
+export default SpecialButton;
