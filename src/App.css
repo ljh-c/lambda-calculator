@@ -31,10 +31,6 @@
     overflow: hidden;
   }
 
-.logo-container {
-    background: pink;
-}
-
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -59,7 +55,7 @@
 
 .container-numbers :nth-child(10) {
     grid-area: 4 / 1 / span 1 / span 2;
-    width: 160px;
+    width: 80%;
     border-radius: 50px;
 }
 
@@ -72,6 +68,7 @@ button {
     background-color: black;
     border: none;
     box-shadow: 0px 4px #322c2d;
+    margin: 7.5px auto;
 }
 
 .btn-special {

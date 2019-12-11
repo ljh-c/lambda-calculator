@@ -13,7 +13,7 @@ const Operators = (props) => {
   return (
     <div className="operators-container">
       {operatorState.map(operator => {
-        return <OperatorButton key={`${operator.char}`} char={operator.char} value={operator.value} handeClick={props.handleClick} />;
+        return <OperatorButton key={`${operator.char}`} char={operator.char} value={operator.value} handleClick={props.handleClick} calculate={props.calculate} />;
       })}
     </div>
   );

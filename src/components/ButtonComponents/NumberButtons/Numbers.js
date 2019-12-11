@@ -16,7 +16,7 @@ const Numbers = (props) => {
   return (
     <div className="container-numbers">
       {numberState.map(number => {
-        return <NumberButton key={`${number}`} number={number} handleClick={props.handleClick}/>;
+        return <NumberButton key={`${number}`} number={number} handleClick={props.handleClick} />;
       })}
     </div>
   );
